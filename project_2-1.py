@@ -5,9 +5,9 @@ print("Registration Form")
 print()
 
 #Get user data
-first_name = input("First Name: ")
-last_name = input("Last Name: ")
-birth_year = input("Birth Year: ")
+first_name = input("First name:     ")
+last_name  = input("Last name:      ")
+birth_year = input("Birth year:     ")
 print()
 
 #Display user data and password
