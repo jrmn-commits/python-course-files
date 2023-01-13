@@ -14,7 +14,7 @@ while continue_var == "y":
     
 #get user data
         costs_items_ordered = float(input("Cost of items ordered:\t "))
-        if costs_items_ordered < 0:
+        if costs_items_ordered < 0: #loop until user input is a positive value
             print("You must enter a positive number. Please try again.")
             continue
         elif costs_items_ordered <= 30.00:     #shipping cost vars
