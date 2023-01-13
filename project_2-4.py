@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#diplay message
+#display message
 print("Price Comparison")
 print()
 
