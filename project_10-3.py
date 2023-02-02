@@ -20,12 +20,12 @@ while continue_var == "y":
         loan_amount = loan_amount.removeprefix("$")
         loan_amount = loan_amount.replace(",", "")
         loan_convert = loan_amount.find("K")
-        if loan_convert == 3:
+        if loan_convert > 0:
                 loan_amount = loan_amount.replace("K", "")
                 loan_amount = float(loan_amount)
                 new_loan_amount = loan_amount * 1000
                 loan_amount = new_loan_amount
-        elif loan_convert < 3:
+        elif loan_convert < 0:
                 loan_amount = float(loan_amount)
         else:
                 print("You must enter a valid number.")
