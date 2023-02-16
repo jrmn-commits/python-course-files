@@ -41,6 +41,7 @@ while continue_var == "y":
         print("Minutes:\t", arrival_mins)
         print(f"Estimated date of arrival:\t {arrival_datetime:{date_format}}")
         print(f"Estimated date of arrival:\t {arrival_datetime:{time_format}}")
+        print()
         
         continue_var = input("Continue? (y/n): ") #loop check
         print()
