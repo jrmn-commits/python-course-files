@@ -17,10 +17,15 @@ while continue_var == "y":
 #get user data
         dep_date_str = input("Estimated date of departure (YYYY-MM-DD):\t ")
         dep_time_str = input("Estimated time of departure (HH:MM AM/PM):\t ")
-        miles = int(input(f"Enter miles:\t "))
-        miles_per_hr = int(input("Enter miles per hour:\t "))
-        print()
-        
+        while True:
+            try:
+                miles = int(input(f"Enter miles:\t "))
+                miles_per_hr = int(input("Enter miles per hour:\t "))
+                print()
+            except ValueError:
+                print("Invalid integer. Please try again. \n")
+                print()
+            break 
         dep_str= dep_date_str + " " + dep_time_str
         dep_datetime = datetime.strptime(dep_str, "%Y-%m-%d %I:%M %p")
         time_traveled = float(miles / miles_per_hr) * 3600
@@ -42,7 +47,7 @@ while continue_var == "y":
         print(f"Estimated date of arrival:\t {arrival_datetime:{date_format}}")
         print(f"Estimated date of arrival:\t {arrival_datetime:{time_format}}")
         print()
-        
+
         continue_var = input("Continue? (y/n): ") #loop check
         print()
         if continue_var == "y": #if y then begin loop / if n then stop and print
